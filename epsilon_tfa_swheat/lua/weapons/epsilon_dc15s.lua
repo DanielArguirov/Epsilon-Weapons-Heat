@@ -3,9 +3,9 @@ if (GetConVar(SWEP.Gun.."_allowed")) != nil then
 	if not (GetConVar(SWEP.Gun.."_allowed"):GetBool()) then SWEP.Base = "tfa_blacklisted" SWEP.PrintName = SWEP.Gun return end
 end
 SWEP.Base							= "tfa_gun_base"
-SWEP.Category						= "TFA StarWars Reworked Heat Weapons"
-SWEP.Manufacturer 					= ""
-SWEP.Author							= "ChanceSphere574"
+SWEP.Category						= "Epsilon FvF | Republic Heat Weapons"
+SWEP.Manufacturer 					= "BlasTech Industries"
+SWEP.Author							= "Daniel."
 SWEP.Contact						= ""
 SWEP.Spawnable						= true
 SWEP.AdminSpawnable					= true
