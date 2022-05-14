@@ -1,4 +1,4 @@
-SWEP.Gun							= ("epsilon_dc15s")
+SWEP.Gun							= ("gun_base")
 if (GetConVar(SWEP.Gun.."_allowed")) != nil then
 	if not (GetConVar(SWEP.Gun.."_allowed"):GetBool()) then SWEP.Base = "tfa_blacklisted" SWEP.PrintName = SWEP.Gun return end
 end
@@ -49,7 +49,7 @@ SWEP.heatDisplayRot = Angle(30, 0, 0)
 
 SWEP.Primary.ClipSize				= 40
 SWEP.Primary.DefaultClip			= 0
-SWEP.Primary.RPM					= 425
+SWEP.Primary.RPM					= 850
 SWEP.Primary.RPM_Burst				= 425
 SWEP.Primary.Ammo					= "none"
 SWEP.Primary.AmmoConsumption 		= 0
@@ -62,7 +62,7 @@ SWEP.Primary.BurstDelay				= 0.2
 SWEP.Primary.Sound 					= Sound ("w/dc15.wav");
 SWEP.Primary.ReloadSound 			= Sound ("w/rifles.wav");
 SWEP.Primary.PenetrationMultiplier 	= 0
-SWEP.Primary.Damage					= 30
+SWEP.Primary.Damage					= 15
 SWEP.Primary.HullSize 				= 0
 SWEP.DamageType 					= nil
 

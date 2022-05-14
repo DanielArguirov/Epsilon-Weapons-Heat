@@ -1,4 +1,5 @@
-SWEP.Gun							= ("epsilon_dp23")
+-- Put your Lua here
+SWEP.Gun							= ("gun_base")
 if (GetConVar(SWEP.Gun.."_allowed")) != nil then
 	if not (GetConVar(SWEP.Gun.."_allowed"):GetBool()) then SWEP.Base = "tfa_blacklisted" SWEP.PrintName = SWEP.Gun return end
 end
@@ -48,7 +49,7 @@ SWEP.heatDisplayRot = Angle(0, 90, -38)
 
 SWEP.Primary.ClipSize				= 8
 SWEP.Primary.DefaultClip			= 8*4
-SWEP.Primary.RPM					= 135
+SWEP.Primary.RPM					= 270
 SWEP.Primary.RPM_Burst				= 135
 SWEP.Primary.Ammo					= "ar2"
 SWEP.Primary.AmmoConsumption 		= 0
@@ -61,7 +62,7 @@ SWEP.Primary.BurstDelay				= 0.2
 SWEP.Primary.Sound 					= Sound ("w/dp23.wav");
 SWEP.Primary.ReloadSound 			= Sound ("w/heavy.wav");
 SWEP.Primary.PenetrationMultiplier 	= 0
-SWEP.Primary.Damage					= 20
+SWEP.Primary.Damage					= 10
 SWEP.Primary.HullSize 				= 0
 SWEP.DamageType 					= nil
 
@@ -149,8 +150,8 @@ SWEP.ViewModelBoneMods = {
 }
 
 SWEP.VElements = {
-	["dp23"] = { type = "Model", model = "models/cs574/weapons/dp23.mdl", bone = "v_dlt19_reference001", rel = "", pos = Vector(0.75, 0.5, 0.5), angle = Angle(0, -90, 0), size = Vector(1.2, 1.1, 1.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {[1] = 0, [2] = 1, [3] = 1} }
-        ["case"] = { type = "Model", model = "models/dolunity/heatometer/heatometer.mdl", bone = "v_dlt19_reference001", rel = "dc15a", pos = SWEP.heatDisplayPos, angle = SWEP.heatDisplayRot, size = Vector(SWEP.heatDisplayX,SWEP.heatDisplayY, SWEP.heatDisplayZ), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+	["dp23"] = { type = "Model", model = "models/cs574/weapons/dp23.mdl", bone = "v_dlt19_reference001", rel = "", pos = Vector(0.75, 0.5, 0.5), angle = Angle(0, -90, 0), size = Vector(1.2, 1.1, 1.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {[1] = 0, [2] = 1, [3] = 1} },
+    ["case"] = { type = "Model", model = "models/dolunity/heatometer/heatometer.mdl", bone = "v_dlt19_reference001", rel = "dp23", pos = SWEP.heatDisplayPos, angle = SWEP.heatDisplayRot, size = Vector(SWEP.heatDisplayX,SWEP.heatDisplayY, SWEP.heatDisplayZ), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["heat"] = { type = "Model", model = "models/hunter/plates/plate025.mdl", bone = "v_dlt19_reference001", rel = "case", pos = Vector(0, 0, 0.02), angle = Angle(0, 0, 0), size = Vector(SWEP.heatDisplayX * 0.6, SWEP.heatDisplayY * 0.7333, SWEP.heatDisplayZ * 0.1), color = Color(255, 255, 255, 255), surpresslightning = true, material = "models/debug/debugwhite", skin = 0, bodygroup = {} },
 }	
 

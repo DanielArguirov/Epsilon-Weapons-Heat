@@ -1,4 +1,4 @@
-SWEP.Gun							= ("epsilon_dc15x")
+SWEP.Gun							= ("gun_base")
 if (GetConVar(SWEP.Gun.."_allowed")) != nil then
 	if not (GetConVar(SWEP.Gun.."_allowed"):GetBool()) then SWEP.Base = "tfa_blacklisted" SWEP.PrintName = SWEP.Gun return end
 end
@@ -48,7 +48,7 @@ SWEP.heatDisplayRot = Angle(0, 90, -38)
 
 SWEP.Primary.ClipSize				= 6
 SWEP.Primary.DefaultClip			= 6*4
-SWEP.Primary.RPM					= 75
+SWEP.Primary.RPM					= 150
 SWEP.Primary.RPM_Burst				= 75
 SWEP.Primary.Ammo					= "ar2"
 SWEP.Primary.AmmoConsumption 		= 1
@@ -61,7 +61,7 @@ SWEP.Primary.BurstDelay				= 0.2
 SWEP.Primary.Sound 					= Sound ("w/dc15x.wav");
 SWEP.Primary.ReloadSound 			= Sound ("w/heavy.wav");
 SWEP.Primary.PenetrationMultiplier 	= 0
-SWEP.Primary.Damage					= 145
+SWEP.Primary.Damage					= 72
 SWEP.Primary.HullSize 				= 0
 SWEP.DamageType 					= nil
 
@@ -149,7 +149,7 @@ SWEP.ViewModelBoneMods = {
 
 SWEP.VElements = {
 	["dc15x"] = { type = "Model", model = "models/cs574/weapons/dc15x.mdl", bone = "v_dlt19_reference001", rel = "", pos = Vector(0.75, -1.5, 2.5), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {[1] = 0, [2] = 0, [3] = 1} },
-	["scope"] = { type = "Model", model = "models/rtcircle.mdl", bone = "v_dlt19_reference001", rel = "dc15x", pos = Vector(5.8, 0, 4.8), angle = Angle(0, 180, 0), size = Vector(0.28, 0.28, 0.28), color = Color(255, 255, 255, 255), surpresslightning = false, material = "!tfa_rtmaterial", skin = 0, bodygroup = {} }
+	["scope"] = { type = "Model", model = "models/rtcircle.mdl", bone = "v_dlt19_reference001", rel = "dc15x", pos = Vector(5.8, 0, 4.8), angle = Angle(0, 180, 0), size = Vector(0.28, 0.28, 0.28), color = Color(255, 255, 255, 255), surpresslightning = false, material = "!tfa_rtmaterial", skin = 0, bodygroup = {} },
         ["case"] = { type = "Model", model = "models/dolunity/heatometer/heatometer.mdl", bone = "", rel = "dc15x", pos = SWEP.heatDisplayPos, angle = SWEP.heatDisplayRot, size = Vector(SWEP.heatDisplayX,SWEP.heatDisplayY, SWEP.heatDisplayZ), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
 	["heat"] = { type = "Model", model = "models/hunter/plates/plate025.mdl", bone = "", rel = "case", pos = Vector(0, 0, 0), angle = Angle(0, 0, 0), size = Vector(SWEP.heatDisplayX * 0.6, SWEP.heatDisplayY * 0.7333, SWEP.heatDisplayZ * 0.1), color = Color(255, 255, 255, 255), surpresslightning = true, material = "models/debug/debugwhite", skin = 0, bodygroup = {} },
 }	
