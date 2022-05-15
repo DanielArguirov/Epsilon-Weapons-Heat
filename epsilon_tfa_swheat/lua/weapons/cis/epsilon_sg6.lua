@@ -1,10 +1,9 @@
--- Put your Lua here
 SWEP.Gun							= ("gun_base")
 if (GetConVar(SWEP.Gun.."_allowed")) != nil then
 	if not (GetConVar(SWEP.Gun.."_allowed"):GetBool()) then SWEP.Base = "tfa_blacklisted" SWEP.PrintName = SWEP.Gun return end
 end
 SWEP.Base							= "tfa_gun_base"
-SWEP.Category						= "Epsilon FvF | Republic Heat Weapons"
+SWEP.Category						= "Epsilon FvF | CIS Heat Weapons"
 SWEP.Manufacturer 					= "Unknown Factory"
 SWEP.Author							= "Daniel."
 SWEP.Contact						= ""
@@ -12,12 +11,12 @@ SWEP.Spawnable						= true
 SWEP.AdminSpawnable					= true
 SWEP.DrawCrosshair					= true
 SWEP.DrawCrosshairIS 				= false
-SWEP.PrintName						= "Heat Weaponized | DP-23"
-SWEP.Type							= "Republic Shotgun Blaster"
+SWEP.PrintName						= "Heat Weaponized | SG-6"
+SWEP.Type							= "CIS Shotgun Blaster"
 SWEP.DrawAmmo						= true
 SWEP.data 							= {}
 SWEP.data.ironsights				= 1
-SWEP.Secondary.IronFOV				= 75
+SWEP.Secondary.IronFOV				= 78
 SWEP.Slot							= 3
 SWEP.SlotPos						= 100
 
@@ -27,13 +26,14 @@ SWEP.IronInSound 					= nil
 SWEP.IronOutSound 					= nil
 SWEP.CanBeSilenced					= false
 SWEP.Silenced 						= false
-SWEP.DoMuzzleFlash 					= false
+SWEP.DoMuzzleFlash 					= true
 SWEP.SelectiveFire					= true
 SWEP.DisableBurstFire				= false
 SWEP.OnlyBurstFire					= false
-SWEP.DefaultFireMode 				= "Single"
+SWEP.DefaultFireMode 				= "single"
 SWEP.FireModeName 					= nil
 SWEP.DisableChambering 				= true
+SWEP.MuzzleFlashEffect 				= ""
 
 SWEP.isHeatBased = true
 SWEP.maxHeat = 25
@@ -47,19 +47,19 @@ SWEP.heatDisplayZ = 0.25
 SWEP.heatDisplayPos = Vector(12.35, 0, 4.29)
 SWEP.heatDisplayRot = Angle(0, 90, -38)
 
-SWEP.Primary.ClipSize				= 8
-SWEP.Primary.DefaultClip			= 8*4
-SWEP.Primary.RPM					= 270
-SWEP.Primary.RPM_Burst				= 135
+SWEP.Primary.ClipSize				= 6
+SWEP.Primary.DefaultClip			= 80
+SWEP.Primary.RPM					= 120
+SWEP.Primary.RPM_Burst				= nil
 SWEP.Primary.Ammo					= "ar2"
 SWEP.Primary.AmmoConsumption 		= 0
-SWEP.Primary.Range 					= 40000
+SWEP.Primary.Range 					= 35000
 SWEP.Primary.RangeFalloff 			= -1
-SWEP.Primary.NumShots				= 8
+SWEP.Primary.NumShots				= 6
 SWEP.Primary.Automatic				= false
 SWEP.Primary.RPM_Semi				= nil
 SWEP.Primary.BurstDelay				= 0.2
-SWEP.Primary.Sound 					= Sound ("w/dp23.wav");
+SWEP.Primary.Sound 					= Sound ("w/sg6.wav");
 SWEP.Primary.ReloadSound 			= Sound ("w/heavy.wav");
 SWEP.Primary.PenetrationMultiplier 	= 0
 SWEP.Primary.Damage					= 25
@@ -72,16 +72,15 @@ SWEP.FireModes = {
 	"Single"
 }
 
-
-SWEP.IronRecoilMultiplier			= 1
+SWEP.IronRecoilMultiplier			= 0.5
 SWEP.CrouchRecoilMultiplier			= 0.25
 SWEP.JumpRecoilMultiplier			= 1.3
 SWEP.WallRecoilMultiplier			= 1.1
 SWEP.ChangeStateRecoilMultiplier	= 1.3
-SWEP.CrouchAccuracyMultiplier		= 1
+SWEP.CrouchAccuracyMultiplier		= 0.81
 SWEP.ChangeStateAccuracyMultiplier	= 1.18
-SWEP.JumpAccuracyMultiplier			= 3.5
-SWEP.WalkAccuracyMultiplier			= 2.5
+SWEP.JumpAccuracyMultiplier			= 2
+SWEP.WalkAccuracyMultiplier			= 1.18
 SWEP.NearWallTime 					= 0.25
 SWEP.ToCrouchTime 					= 0.25
 SWEP.WeaponLength 					= 35
@@ -91,9 +90,9 @@ SWEP.ProjectileVelocity 			= 9
 SWEP.ProjectileEntity 				= nil
 SWEP.ProjectileModel 				= nil
 
-SWEP.ViewModel						= "models/weapons/synbf3/c_dlt19.mdl"
-SWEP.WorldModel						= "models/weapons/synbf3/w_dlt19.mdl"
-SWEP.ViewModelFOV					= 75
+SWEP.ViewModel						= "models/bf2017/c_dlt19.mdl"
+SWEP.WorldModel						= "models/bf2017/w_dlt19.mdl"
+SWEP.ViewModelFOV					= 70
 SWEP.ViewModelFlip					= false
 SWEP.MaterialTable 					= nil
 SWEP.UseHands 						= true
@@ -103,7 +102,7 @@ SWEP.ReloadHoldTypeOverride 		= "ar2"
 SWEP.ShowWorldModel = false
 
 SWEP.BlowbackEnabled 				= true
-SWEP.BlowbackVector 				= Vector(0,-6,0)
+SWEP.BlowbackVector 				= Vector(0,-6)
 SWEP.BlowbackCurrentRoot			= 0
 SWEP.BlowbackCurrent 				= 0
 SWEP.BlowbackBoneMods 				= nil
@@ -113,51 +112,51 @@ SWEP.Blowback_Shell_Enabled 		= false
 SWEP.Blowback_Shell_Effect 			= "None"
 
 SWEP.Tracer							= 0
-SWEP.TracerName 					= "rw_sw_laser_blue"
+SWEP.TracerName 					= "rw_sw_laser_red"
 SWEP.TracerCount 					= 1
 SWEP.TracerLua 						= false
 SWEP.TracerDelay					= 0.01
-SWEP.ImpactEffect 					= "rw_sw_impact_blue"
+SWEP.ImpactEffect 					= "rw_sw_impact_red"
 SWEP.ImpactDecal 					= "FadingScorch"
 
-
-SWEP.VMPos = Vector(2, -2, -2)
+SWEP.VMPos = Vector(2.3, 1, -4)
 SWEP.VMAng = Vector(0,0,0)
 
-SWEP.IronSightTime 					= 0.3
-SWEP.Primary.KickUp					= 2.1
-SWEP.Primary.KickDown				= 1.9
-SWEP.Primary.KickHorizontal			= 0.12
+SWEP.IronSightTime 					= 0.7
+SWEP.Primary.KickUp					= 0.15*8
+SWEP.Primary.KickDown				= 0.12*8
+SWEP.Primary.KickHorizontal			= 0.12*8
 SWEP.Primary.StaticRecoilFactor 	= 0.6
-SWEP.Primary.Spread					= 0.08
-SWEP.Primary.IronAccuracy 			= 0.07
+SWEP.Primary.Spread					= 0.07
+SWEP.Primary.IronAccuracy 			= 0.05
 SWEP.Primary.SpreadMultiplierMax 	= 2.5
-SWEP.Primary.SpreadIncrement 		= 0.3
+SWEP.Primary.SpreadIncrement 		= 0.22
 SWEP.Primary.SpreadRecovery 		= 0.8
 SWEP.DisableChambering 				= true
-SWEP.MoveSpeed 						= 1
-SWEP.IronSightsMoveSpeed 			= 0.8
+SWEP.MoveSpeed 						= 0.85
+SWEP.IronSightsMoveSpeed 			= 0.75
 
-SWEP.IronSightsPos = Vector(-4.85, -4, 2.75)
-SWEP.IronSightsAng = Vector(0, 0, 0)
+SWEP.IronSightsPos = Vector(-6.1, 0, 02.5)
+SWEP.IronSightsAng = Vector(2, 0.15, 0)
 SWEP.RunSightsPos = Vector(5.226, -2, 0)
-SWEP.RunSightsAng = Vector(-18, 36, -13.5)
+SWEP.RunSightsAng = Vector(-22, 35, -22)
 SWEP.InspectPos = Vector(8, -4.8, -3)
 SWEP.InspectAng = Vector(11.199, 38, 0)
 
 SWEP.ViewModelBoneMods = {
-	["v_dlt19_reference001"] = { scale = Vector(0.009, 0.009, 0.009), pos = Vector(0, 0, 0), angle = Angle(0, 0, 0) }
+	["v_dlt19_reference001"] = { scale = Vector(0.009, 0.009, 0.009), pos = Vector(0, 0, 1), angle = Angle(0, 0, 0) }
 }
 
 SWEP.VElements = {
-	["dp23"] = { type = "Model", model = "models/cs574/weapons/dp23.mdl", bone = "v_dlt19_reference001", rel = "", pos = Vector(0.75, 0.5, 0.5), angle = Angle(0, -90, 0), size = Vector(1.2, 1.1, 1.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {[1] = 0, [2] = 1, [3] = 1} },
-    ["case"] = { type = "Model", model = "models/dolunity/heatometer/heatometer.mdl", bone = "", rel = "dp23", pos = SWEP.heatDisplayPos, angle = SWEP.heatDisplayRot, size = Vector(SWEP.heatDisplayX,SWEP.heatDisplayY, SWEP.heatDisplayZ), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["heat"] = { type = "Model", model = "models/hunter/plates/plate025.mdl", bone = "", rel = "case", pos = Vector(0, 0, 0), angle = Angle(0, 0, 0), size = Vector(SWEP.heatDisplayX * 0.6, SWEP.heatDisplayY * 0.7333, SWEP.heatDisplayZ * 0.1), color = Color(255, 255, 255, 255), surpresslightning = true, material = "models/debug/debugwhite", skin = 0, bodygroup = {} },
-}	
+	["hunter"] = { type = "Model", model = "models/swbf3/weapons/cisshotgun.mdl", bone = "v_dlt19_reference001", rel = "", pos = Vector(0, 0, 1), angle = Angle(0, 89.5, 0), size = Vector(1.2, 1.2, 1.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+}
 
 SWEP.WElements = {
-	["dp23"] = { type = "Model", model = "models/cs574/weapons/dp23.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(3.5, 0.5, -1.5), angle = Angle(-12, 0, 172), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {[1] = 0, [2] = 1, [3] = 1} }
+	["hunter"] = { type = "Model", model = "models/swbf3/weapons/cisshotgun.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(4.5, 1, -3), angle = Angle(13, 180, 180), size = Vector(1.1, 1.1, 1.1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 }
+
+SWEP.LuaShellEject = true
+SWEP.LuaShellEffect = ""
 
 SWEP.ThirdPersonReloadDisable		=false
 SWEP.Primary.DamageType 			= DMG_BULLET
@@ -165,8 +164,8 @@ SWEP.DamageType 					= DMG_BULLET
 SWEP.RTScopeAttachment				= -1
 SWEP.Scoped_3D 						= false
 SWEP.ScopeReticule 					= "scope/gdcw_elcanreticle" 
-SWEP.Secondary.ScopeZoom 			= 3
-SWEP.ScopeReticule_Scale 			= {1,1}
+SWEP.Secondary.ScopeZoom 			= 10
+SWEP.ScopeReticule_Scale 			= {2.5,2.5}
 if surface then
 	SWEP.Secondary.ScopeTable = nil --[[
 		{
