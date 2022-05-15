@@ -49,8 +49,8 @@ SWEP.heatDisplayRot = Angle(30, 0, 0)
 
 SWEP.Primary.ClipSize				= 40
 SWEP.Primary.DefaultClip			= 0
-SWEP.Primary.RPM					= 850
-SWEP.Primary.RPM_Burst				= 425
+SWEP.Primary.RPM					= 625
+SWEP.Primary.RPM_Burst				= 625
 SWEP.Primary.Ammo					= "none"
 SWEP.Primary.AmmoConsumption 		= 0
 SWEP.Primary.Range 					= 40000
