@@ -154,8 +154,6 @@ SWEP.ViewModelBoneMods = {
 SWEP.VElements = {
 	["m5"] = { type = "Model", model = "models/sw_battlefront/weapons/new/westar_m5_blaster_rifle.mdl", bone = "v_dlt19_reference001", rel = "", pos = Vector(01, 01, -0.25), angle = Angle(0, 180, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {[1] = 1, [2] = 1, [3] = 1, [4] = 1, [5] = 1, [6] = 1} },
 	["scope"] = { type = "Model", model = "models/rtcircle.mdl", bone = "v_dlt19_reference001", rel = "m5", pos = Vector(0.475, 4.2, 5.58), angle = Angle(0, -90, 0), size = Vector(0.36, 0.36, 0.36), color = Color(255, 255, 255, 255), surpresslightning = false, material = "!tfa_rtmaterial", skin = 0, bodygroup = {} },
-        ["case"] = { type = "Model", model = "models/dolunity/heatometer/heatometer.mdl", bone = "", rel = "dc15s", pos = SWEP.heatDisplayPos, angle = SWEP.heatDisplayRot, size = Vector(SWEP.heatDisplayX,SWEP.heatDisplayY, SWEP.heatDisplayZ), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["heat"] = { type = "Model", model = "models/hunter/plates/plate025.mdl", bone = "", rel = "case", pos = Vector(0, 0, 0), angle = Angle(0, 0, 0), size = Vector(SWEP.heatDisplayX * 0.6, SWEP.heatDisplayY * 0.7333, SWEP.heatDisplayZ * 0.1), color = Color(255, 255, 255, 255), surpresslightning = true, material = "models/debug/debugwhite", skin = 0, bodygroup = {} },
 }	
 
 SWEP.WElements = {
