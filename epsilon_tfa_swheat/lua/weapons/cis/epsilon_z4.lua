@@ -1,9 +1,9 @@
-SWEP.Gun							= ("gun_base")
+SWEP.Gun							= ("epsilon_z4")
 if (GetConVar(SWEP.Gun.."_allowed")) != nil then
 	if not (GetConVar(SWEP.Gun.."_allowed"):GetBool()) then SWEP.Base = "tfa_blacklisted" SWEP.PrintName = SWEP.Gun return end
 end
 SWEP.Base							= "tfa_gun_base"
-SWEP.Category						= "TFA StarWars Reworked CIS"
+SWEP.Category						= "Epsilon FvF | CIS Heat Weapons"
 SWEP.Manufacturer 					= "Blastech Industries"
 SWEP.Author							= "ChanceSphere574"
 SWEP.Contact						= ""
@@ -11,7 +11,7 @@ SWEP.Spawnable						= true
 SWEP.AdminSpawnable					= true
 SWEP.DrawCrosshair					= true
 SWEP.DrawCrosshairIS 				= false
-SWEP.PrintName						= "Z-4"
+SWEP.PrintName						= "Heat Weaponized | Z-4"
 SWEP.Type							= "CIS Rotary Canon Blaster"
 SWEP.DrawAmmo						= true
 SWEP.data 							= {}

@@ -1,5 +1,5 @@
 -- Put your Lua here
-SWEP.Gun							= ("gun_base")
+SWEP.Gun							= ("epsilon_dp23")
 if (GetConVar(SWEP.Gun.."_allowed")) != nil then
 	if not (GetConVar(SWEP.Gun.."_allowed"):GetBool()) then SWEP.Base = "tfa_blacklisted" SWEP.PrintName = SWEP.Gun return end
 end

@@ -1,4 +1,4 @@
-SWEP.Gun							= ("gun_base")
+SWEP.Gun							= ("epsilon_se14")
 if (GetConVar(SWEP.Gun.."_allowed")) != nil then
 	if not (GetConVar(SWEP.Gun.."_allowed"):GetBool()) then SWEP.Base = "tfa_blacklisted" SWEP.PrintName = SWEP.Gun return end
 end
